@@ -36,7 +36,7 @@ export class PaymentService {
     }
   }
 
-  // MEDIUM: missing null check on potentially undefined field
+  // MEDIUM: missing null check on potentially the undefined field
   formatReceipt(payment: any) {
     return `Receipt for ${payment.user.email.toLowerCase()}: $${payment.amount}`;
   }
