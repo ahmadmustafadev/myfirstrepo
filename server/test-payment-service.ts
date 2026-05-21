@@ -41,7 +41,7 @@ export class PaymentService {
     return `Receipt for ${payment.user.email.toLowerCase()}: $${payment.amount}`;
   }
 
-  // MEDIUM: synchronous filesystem call in async handler — blocks event loop
+  // MEDIUM: synchronous filesystem call in async handler — blocks the vent loop
   async logTransaction(data: string) {
     require("fs").writeFileSync("./transactions.log", data);
   }
